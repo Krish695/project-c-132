@@ -1,0 +1,21 @@
+import pandas as pd
+import matplotlib.pyplot as plt 
+df=pd.read_csv("star_with_gravity.csv")
+df.head()
+mass=df["mass"].to_list()
+radius=df["radius"].to_list()
+gravity=df["Gravity"].to_list()
+mass.sort()
+radius.sort()
+gravity.sort()
+#plt.plot(radius,mass)
+#plt.title("radius and mass of the star")
+#plt.xlabel("radius")
+#plt.ylabel("mass")
+#plt.show()
+
+plt.plot(gravity,mass)
+plt.title("gravity and mass of the star")
+plt.xlabel("Gravity")
+plt.ylabel("mass")
+plt.show()
